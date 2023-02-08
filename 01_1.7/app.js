@@ -8,6 +8,7 @@ Vue.createApp({
     methods: {
         addGoal() {
             this.goals.push(this.inputGoal);
+            this.inputGoal = "";
         }
     }
 }).mount('#app');
