@@ -5,5 +5,10 @@ const app = Vue.createApp({
       age: 32,
     };
   },
+  methods: {
+    getAgeAfter(years = 0) {
+      return this.age + years;
+    },
+  },
 });
 app.mount("#assignment");
