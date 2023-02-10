@@ -16,12 +16,10 @@ const app = Vue.createApp({
     },
   },
   watch: {
-    counter() {
-      console.log("I am watcher!");
+    result() {
       const ref = this;
       setTimeout(() => {
         ref.counter = 0;
-        console.log("Resetting...");
       }, 5000);
     },
   },
