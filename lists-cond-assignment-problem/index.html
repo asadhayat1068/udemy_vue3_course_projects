@@ -24,7 +24,7 @@
       <button @click="addTask(mTask)">Add Task</button>
       <ul v-if="showTasks">
         <!-- 2) Output the list of tasks here -->
-        <li v-for="(task, i) in tasks" :id="i">{{ task }}</li>
+        <li v-for="(task, i) in tasks" :key="i">{{ task }}</li>
       </ul>
       <br v-if="!showTasks" />
       <br v-if="!showTasks" />
