@@ -3,6 +3,7 @@ const app = Vue.createApp({
     return {
       mTask: "",
       tasks: [],
+      showTasks: true,
     };
   },
   methods: {
@@ -14,6 +15,9 @@ const app = Vue.createApp({
       this.tasks.push(_task);
       console.log("Task: ", this.tasks);
       this.mTask = "";
+    },
+    toggleShowTasks() {
+      this.showTasks = !this.showTasks;
     },
   },
 });

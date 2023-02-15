@@ -22,13 +22,15 @@
       <!-- When clicking "Add Task" a new task with the entered text should be added -->
       <input v-model="mTask" type="text" />
       <button @click="addTask(mTask)">Add Task</button>
-      <ul>
+      <ul v-if="showTasks">
         <!-- 2) Output the list of tasks here -->
         <li v-for="(task, i) in tasks" :id="i">{{ task }}</li>
       </ul>
+      <br v-if="!showTasks" />
+      <br v-if="!showTasks" />
       <!-- 3) When the below button is pressed, the list should be shown or hidden -->
       <!-- BONUS: Also update the button caption -->
-      <button>Hide / Show List</button>
+      <button @click="toggleShowTasks">Hide / Show List</button>
     </section>
   </body>
 </html>
